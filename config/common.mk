@@ -234,11 +234,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.iorapd.enable=true
 
 # Gapps/faceunlock
-ifeq ($(LEGION_BUILD_TYPE), OFFICIAL)
 $(call inherit-product-if-exists, vendor/legion/config/faceunlock.mk)
 ifeq ($(WITH_GAPPS), true)
 -include vendor/google/gms/gms-vendor.mk
-endif
 endif
 
 # Disable blurs
